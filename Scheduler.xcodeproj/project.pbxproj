@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FA45E5023DB596C006EC6AB /* SchedulesTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA45E4F23DB596C006EC6AB /* SchedulesTabController.swift */; };
 		5712587F2385A80D00805579 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5712587E2385A80D00805579 /* AppDelegate.swift */; };
 		571258812385A80D00805579 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571258802385A80D00805579 /* SceneDelegate.swift */; };
 		571258832385A80D00805579 /* ScheduleListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571258822385A80D00805579 /* ScheduleListController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FA45E4F23DB596C006EC6AB /* SchedulesTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesTabController.swift; sourceTree = "<group>"; };
 		5712587B2385A80D00805579 /* Scheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scheduler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5712587E2385A80D00805579 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		571258802385A80D00805579 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		57DD381223D1C9A9003586CD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0FA45E4F23DB596C006EC6AB /* SchedulesTabController.swift */,
 				571258822385A80D00805579 /* ScheduleListController.swift */,
 				571258922385AD0100805579 /* CreateEventController.swift */,
 				5779F98C23D3310F000D3444 /* CompletedScheduleController.swift */,
@@ -196,6 +199,7 @@
 				57989B6923D9C02200BC195A /* FileManager+Extensions.swift in Sources */,
 				571258952385B4BC00805579 /* Event.swift in Sources */,
 				57989B6B23D9C07100BC195A /* PersistenceHelper.swift in Sources */,
+				0FA45E5023DB596C006EC6AB /* SchedulesTabController.swift in Sources */,
 				5779F98D23D3310F000D3444 /* CompletedScheduleController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,13 +345,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZEKMNK5YD3;
+				DEVELOPMENT_TEAM = KLSSQ3HH68;
 				INFOPLIST_FILE = Scheduler/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alexcpaul.Scheduler;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexcpaul.Schedulerg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -359,13 +363,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZEKMNK5YD3;
+				DEVELOPMENT_TEAM = KLSSQ3HH68;
 				INFOPLIST_FILE = Scheduler/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alexcpaul.Scheduler;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexcpaul.Schedulerg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
