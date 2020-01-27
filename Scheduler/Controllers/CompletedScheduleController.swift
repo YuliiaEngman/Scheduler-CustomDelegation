@@ -12,11 +12,13 @@ class CompletedScheduleController: UIViewController {
     
   private var completedEvents = [Event]() {
     didSet {
-      // code here
+        guard let tableview = tableView else { return }
+        tableview.reloadData()
     }
   }
     
-    public var dataPersistance: DataPersistence<Event>!
+    private let completedEventsPersistance = DataPersistence<Event>(filename: "completedEvents.plist")
+    public var dataPersistance: DataPersistence<Event>! // "schedules.plist"
   
   @IBOutlet weak var tableView: UITableView!
   
@@ -27,7 +29,11 @@ class CompletedScheduleController: UIViewController {
   }
   
   private func loadCompletedItems() {
-    // code here
+    do {
+        completedEvents = try completedEventsPersistance.loadItems()
+    } catch {
+        print("error loading completed events: \(error)")
+    }
   }
 }
 
@@ -50,8 +56,30 @@ extension CompletedScheduleController: UITableViewDataSource {
       completedEvents.remove(at: indexPath.row)
       
       // TODO: persist change
+        do {
+            try completedEventsPersistance.deleteItem(at: indexPath.row)
+        } catch {
+            print("error deleted completed task: \(error)")
+        }
     }
   }
 }
 
+
+extension CompletedScheduleController: DataPersistanceDelegate {
+    func didDeleteItem<T>(_ persistanceHelper: DataPersistence<T>, item: T) where T : Decodable, T : Encodable, T : Equatable {
+       // print("item was deleted")
+        
+        //persist item to completed events persistance
+        do{
+            let event = item as! Event
+            try completedEventsPersistance.createItem(event)
+        }catch{
+            print("error creating item: \(error)")
+        }
+        
+        //reload completed items array
+        loadCompletedItems()
+    }
+}
 

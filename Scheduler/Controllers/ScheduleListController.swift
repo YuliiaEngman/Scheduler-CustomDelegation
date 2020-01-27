@@ -178,6 +178,10 @@ extension ScheduleListController: UITableViewDelegate {
         let event = events[indexPath.row]
         showCreateEventVC(event) // this send us to another VC
     }
+    
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "Completed"
+    }
 }
 
 
